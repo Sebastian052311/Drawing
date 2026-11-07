@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drawing stuff</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <h1>Dibujos perrones</h1>
+
+    <div>
+      <canvas id="Espiral" width="900" height="500"> </canvas>
+
+      <script src="EspiralAurea.js"></script>
+      <p>
+        Aqui lo que vez en teoria es una espiral dorada, formada por el
+        crecimiento exponecial respecto a la proporcion aurea (1+√5)/2 la cual
+        moldeamos un poco para que pueda encajar en este canvas. Abajo una
+        imagen de la
+        <a href="https://www.desmos.com/calculator/yxno7vrmt4?lang=es"
+          >ecuacion usada para el radio</a
+        >
+
+        y su traduccion a Js para el canvas
+      </p>
+
+      <img src="Screenshot 2026-11-07 103259.webp" alt="" />
+      <img src="Screenshot 2026-11-07 103825.webp" alt="" />
+    </div>
+    <div>
+      <canvas id="Estrella" width="900" height="450"> </canvas>
+
+      <script src="Estrellitas.js"></script>
+
+      <p>
+        Este script es un ejercicio de geometría analítica que genera arte de
+        cuerdas (string art), donde la intersección de líneas rectas crea la
+        ilusión de curvas parabólicas. Utilizando la API Canvas de JavaScript,
+        el código configura un lienzo rojo de 900x450 píxeles. La variable S =
+        75 actúa como resolución, dividiendo el espacio en setenta y cinco
+        segmentos idénticos mediante fórmulas matemáticas que calculan los
+        incrementos en los ejes. Cuatro bucles secuenciales conectan un punto
+        móvil de un eje con el eje perpendicular opuesto. Aunque la computadora
+        solo procesa trazos rectos con el comando lineTo, el desfase constante y
+        la densidad de la red engañan al ojo humano, revelando curvas fluidas en
+        los bordes.
+      </p>
+    </div>
+  
+<p>Hello</p>
+
+</body>
+</html>
