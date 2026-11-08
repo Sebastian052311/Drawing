@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,10 +9,13 @@
   <body>
     <h1>Dibujos perrones</h1>
 
-    <div>
+    <div class="canvas-container">
+      <button id="start-spiral" type="button">Mostrar espiral</button>
       <canvas id="Espiral" width="900" height="500"> </canvas>
+    </div>
 
-      <script src="EspiralAurea.js"></script>
+    <script src="EspiralAurea.js"></script>
+    <div>
       <p>
         Aqui lo que vez en teoria es una espiral dorada, formada por el
         crecimiento exponecial respecto a la proporcion aurea (1+√5)/2 la cual
@@ -28,11 +31,78 @@
       <img src="Screenshot 2026-11-07 103259.webp" alt="" />
       <img src="Screenshot 2026-11-07 103825.webp" alt="" />
     </div>
-    <div>
+    <div class="canvas-container">
+      <div class="star-controls">
+        <button id="start-star" type="button">Mostrar estrella</button>
+        <div
+          class="section-controls"
+          role="group"
+          aria-label="Secciones de la estrella"
+        >
+          <button
+            type="button"
+            data-star-section
+            aria-label="Sección 1: arriba a la izquierda"
+            aria-pressed="true"
+          >
+            1
+          </button>
+          <button
+            type="button"
+            data-star-section
+            aria-label="Sección 2: arriba a la derecha"
+            aria-pressed="true"
+          >
+            2
+          </button>
+          <button
+            type="button"
+            data-star-section
+            aria-label="Sección 3: abajo a la izquierda"
+            aria-pressed="true"
+          >
+            3
+          </button>
+          <button
+            type="button"
+            data-star-section
+            aria-label="Sección 4: abajo a la derecha"
+            aria-pressed="true"
+          >
+            4
+          </button>
+        </div>
+      </div>
+      <div class="star-settings">
+        <label>
+          S:
+          <input
+            id="star-resolution"
+            type="number"
+            min="1"
+            max="225"
+            step="1"
+            value="75"
+          />
+        </label>
+        <label>
+          Duración (ms):
+          <input
+            id="star-duration"
+            type="number"
+            min="100"
+            max="5000"
+            step="100"
+            value="2000"
+          />
+        </label>
+      </div>
       <canvas id="Estrella" width="900" height="450"> </canvas>
+    </div>
 
-      <script src="Estrellitas.js"></script>
+    <script src="Estrellitas.js"></script>
 
+    <div>
       <p>
         Este script es un ejercicio de geometría analítica que genera arte de
         cuerdas (string art), donde la intersección de líneas rectas crea la
@@ -47,8 +117,7 @@
         los bordes.
       </p>
     </div>
-  
-<p>Hello</p>
 
-</body>
+    <p>Hello</p>
+  </body>
 </html>
