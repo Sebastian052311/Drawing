@@ -17,18 +17,31 @@
     <script src="EspiralAurea.js"></script>
     <div>
       <p>
-        Aqui lo que vez en teoria es una espiral dorada, formada por el
-        crecimiento exponecial respecto a la proporcion aurea (1+√5)/2 la cual
-        moldeamos un poco para que pueda encajar en este canvas. Abajo una
-        imagen de la
-        <a href="https://www.desmos.com/calculator/yxno7vrmt4?lang=es"
-          >ecuacion usada para el radio</a
-        >
+        Esta visualización implementa una espiral áurea analíticamente pura
+        donde el crecimiento del radio está dictado estrictamente por la
+        proporción áurea (1+<span>&radic;</span>5)/2 elevada a una potencia
+        angular fraccionaria, garantizando que la curva se expanda un factor
+        exacto de
+        <span>&Phi;</span> por cada cuadrante de rotación. Debido a que la
+        ecuación geométrica pura asume un radio inicial unitario de un solo
+        píxel que resultaría invisible en pantalla, el código introduce un
+        multiplicador de escala empírico de <code>2.6</code> y un desplazamiento
+        de fase de -90&deg;. Estas modificaciones son estrictamente cosméticas y
+        dimensionales, actuando como un ajuste de zoom y orientación que adapta
+        el despliegue armónico de la espiral para optimizar su visibilidad y
+        encuadre dentro de los límites del lienzo.
 
-        y su traduccion a Js para el canvas
+        <br />
+
+        De hecho, como dato curioso, notaras que el boton sigue mostando el
+        mensaje "dibujando..." cuando el dbujo para ti, usuario ya esta
+        terminado, aun asi esto se debe a que lo que vez es una parte de la
+        espiral completa, aun asi la puedes ver completa
+        <a href="https://www.desmos.com/calculator/yxno7vrmt4?lang=es">aqui</a>
+        en el desmos de esta espiral
       </p>
 
-      <img src="Screenshot 2026-11-07 103259.webp" alt="" />
+      <img src="Screenshot 2026-11-10 214448.webp" alt="" />
       <img src="Screenshot 2026-11-07 103825.webp" alt="" />
     </div>
     <div class="canvas-container">
@@ -104,17 +117,17 @@
 
     <div>
       <p>
-        Este script es un ejercicio de geometría analítica que genera arte de
-        cuerdas (string art), donde la intersección de líneas rectas crea la
-        ilusión de curvas parabólicas. Utilizando la API Canvas de JavaScript,
-        el código configura un lienzo rojo de 900x450 píxeles. La variable S =
-        75 actúa como resolución, dividiendo el espacio en setenta y cinco
-        segmentos idénticos mediante fórmulas matemáticas que calculan los
-        incrementos en los ejes. Cuatro bucles secuenciales conectan un punto
-        móvil de un eje con el eje perpendicular opuesto. Aunque la computadora
-        solo procesa trazos rectos con el comando lineTo, el desfase constante y
-        la densidad de la red engañan al ojo humano, revelando curvas fluidas en
-        los bordes.
+        Este script genera "arte de cuerdas" dinámico mediante geometría
+        analítica, utilizando la API Canvas de JavaScript para transformar
+        líneas rectas en una ilusión óptica de curvas parabólicas fluidas. El
+        panel de control otorga una interacción total con el algoritmo: al
+        manipular el deslizador de resolución
+        <code>S</code> se recalcula matemáticamente la densidad de los segmentos
+        de la red, mientras que el control de duración modifica la velocidad con
+        la que cuatro bucles secuenciales conectan los ejes perpendiculares,
+        permitiendo al usuario experimentar en tiempo real con el ritmo de
+        construcción de la estructura geométrica, asi como elegir cuales de los
+        cuatro segmentos seran realizados y cuales no.
       </p>
     </div>
 
